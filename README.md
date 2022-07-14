@@ -1,4 +1,9 @@
-# JIPipe
+# JIPipe Python Adapter
+
+Adapter library between JIPipe and Python.
+Currently in development.
+
+## Part of the JIPipe project
 
 A graphical batch processing language for image analysis.
 This project provides an adapter package to communicate with JIPipe data. It is used in conjunction with the Python
