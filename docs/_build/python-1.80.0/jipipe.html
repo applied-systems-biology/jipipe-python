@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>jipipe package &mdash; JIPipe Python Bridge  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="jipipe" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            JIPipe Python Bridge
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">jipipe</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">jipipe package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-jipipe.data_slot">jipipe.data_slot module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-jipipe.filesystem">jipipe.filesystem module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-jipipe.imagej">jipipe.imagej module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-jipipe">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">JIPipe Python Bridge</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">jipipe</a></li>
+      <li class="breadcrumb-item active">jipipe package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/jipipe.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="jipipe-package">
+<h1>jipipe package<a class="headerlink" href="#jipipe-package" title="Permalink to this headline"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+</section>
+<section id="module-jipipe.data_slot">
+<span id="jipipe-data-slot-module"></span><h2>jipipe.data_slot module<a class="headerlink" href="#module-jipipe.data_slot" title="Permalink to this headline"></a></h2>
+<p>This file provides functions that are used to manage the contents of a data slot</p>
+<p>Zoltán Cseresnyés, Ruman Gerst</p>
+<p>Research Group Applied Systems Biology - Head: Prof. Dr. Marc Thilo Figge
+<a class="reference external" href="https://www.leibniz-hki.de/en/applied-systems-biology.html">https://www.leibniz-hki.de/en/applied-systems-biology.html</a>
+HKI-Center for Systems Biology of Infection
+Leibniz Institute for Natural Product Research and Infection Biology - Hans Knöll Institute (HKI)
+Adolf-Reichwein-Straße 23, 07745 Jena, Germany</p>
+<p>The project code is licensed under BSD 2-Clause.
+See the LICENSE file provided with the code for the full license.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="jipipe.data_slot.DataSlot">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">jipipe.data_slot.</span></span><span class="sig-name descname"><span class="pre">DataSlot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">storage_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pathlib.Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">internal_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pathlib.Path</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">slot_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jipipe/data_slot.html#DataSlot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jipipe.data_slot.DataSlot" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Models a JIPipe data slot.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="jipipe.data_slot.DataSlot.add_row">
+<span class="sig-name descname"><span class="pre">add_row</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text_annotations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_annotations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">true_data_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jipipe/data_slot.html#DataSlot.add_row"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jipipe.data_slot.DataSlot.add_row" title="Permalink to this definition"></a></dt>
+<dd><p>Adds n rows into the slot
+:param true_data_type: the true data type ID of this entry. If none, the slot data type is used
+:param text_annotations: annotations to set for these rows
+:param data_annotations: annotations to set for these rows
+:param n: how many rows to add
+:return: the last row index</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="jipipe.data_slot.DataSlot.copy_row">
+<span class="sig-name descname"><span class="pre">copy_row</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source_data_slot</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_row</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jipipe/data_slot.html#DataSlot.copy_row"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jipipe.data_slot.DataSlot.copy_row" title="Permalink to this definition"></a></dt>
+<dd><p>Copies data from the source slot into this slot
+:param source_data_slot: the source slot
+:param source_row: the source row</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="jipipe.data_slot.DataSlot.get_row_storage_path">
+<span class="sig-name descname"><span class="pre">get_row_storage_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jipipe/data_slot.html#DataSlot.get_row_storage_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jipipe.data_slot.DataSlot.get_row_storage_path" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the storage path for the provided row
+:param row: the row index
+:return: the storage path for the row</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="jipipe.data_slot.DataSlot.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">with_csv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jipipe/data_slot.html#DataSlot.save"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jipipe.data_slot.DataSlot.save" title="Permalink to this definition"></a></dt>
+<dd><p>Saves all metadata related to this slot in the storage folder.
+This will overwrite data-table.json and data-table.csv (if enabled)
+:param with_csv: Also write the table as CSV. The format is equivalent to the one generated by JIPipe. Writing with CSV requires pandas to be installed.
+:return: None</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="jipipe.data_slot.DataSlot.to_dict">
+<span class="sig-name descname"><span class="pre">to_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/jipipe/data_slot.html#DataSlot.to_dict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jipipe.data_slot.DataSlot.to_dict" title="Permalink to this definition"></a></dt>
+<dd><p>Converts the data slot into a dict that can be serialized into JSON
+:return: a dictionary that describes this slot</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="jipipe.data_slot.DataSlot.to_table">
+<span class="sig-name descname"><span class="pre">to_table</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/jipipe/data_slot.html#DataSlot.to_table"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jipipe.data_slot.DataSlot.to_table" title="Permalink to this definition"></a></dt>
+<dd><p>Converts the data slot into a Pandas table.The format is equivalent to data-table.csv generated by JIPipe.
+:return: Pandas table</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="jipipe.data_slot.import_from_folder">
+<span class="sig-prename descclassname"><span class="pre">jipipe.data_slot.</span></span><span class="sig-name descname"><span class="pre">import_from_folder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">storage_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pathlib.Path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jipipe/data_slot.html#import_from_folder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jipipe.data_slot.import_from_folder" title="Permalink to this definition"></a></dt>
+<dd><p>Imports a data slot from a storage path.
+A valid storage path contains ‘data-table.json’ and multiple numeric folders.
+:param storage_path: the storage path
+:return: a DataSlot instance</p>
+</dd></dl>
+
+</section>
+<section id="module-jipipe.filesystem">
+<span id="jipipe-filesystem-module"></span><h2>jipipe.filesystem module<a class="headerlink" href="#module-jipipe.filesystem" title="Permalink to this headline"></a></h2>
+<p>This file provides functions to read/write ImageJ data types</p>
+<p>Zoltán Cseresnyés, Ruman Gerst</p>
+<p>Research Group Applied Systems Biology - Head: Prof. Dr. Marc Thilo Figge
+<a class="reference external" href="https://www.leibniz-hki.de/en/applied-systems-biology.html">https://www.leibniz-hki.de/en/applied-systems-biology.html</a>
+HKI-Center for Systems Biology of Infection
+Leibniz Institute for Natural Product Research and Infection Biology - Hans Knöll Institute (HKI)
+Adolf-Reichwein-Straße 23, 07745 Jena, Germany</p>
+<p>The project code is licensed under BSD 2-Clause.
+See the LICENSE file provided with the code for the full license.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="jipipe.filesystem.add_file">
+<span class="sig-prename descclassname"><span class="pre">jipipe.filesystem.</span></span><span class="sig-name descname"><span class="pre">add_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_slot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#jipipe.data_slot.DataSlot" title="jipipe.data_slot.DataSlot"><span class="pre">jipipe.data_slot.DataSlot</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">text_annotations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_annotations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jipipe/filesystem.html#add_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jipipe.filesystem.add_file" title="Permalink to this definition"></a></dt>
+<dd><p>Adds a new path into a new row of the specified slot
+:param path: a path-like object
+:param data_slot: the data slot
+:param text_annotations: optional annotations (a dict of string keys and string values)
+:param data_annotations: optional annotations (a dict of string keys and dict values that contain true-data-type and row-storage-folder)
+:return: index of the newly added row</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="jipipe.filesystem.add_folder">
+<span class="sig-prename descclassname"><span class="pre">jipipe.filesystem.</span></span><span class="sig-name descname"><span class="pre">add_folder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_slot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#jipipe.data_slot.DataSlot" title="jipipe.data_slot.DataSlot"><span class="pre">jipipe.data_slot.DataSlot</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">text_annotations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_annotations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jipipe/filesystem.html#add_folder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jipipe.filesystem.add_folder" title="Permalink to this definition"></a></dt>
+<dd><p>Adds a new path into a new row of the specified slot
+:param path: a path-like object
+:param data_slot: the data slot
+:param text_annotations: optional annotations (a dict of string keys and string values)
+:param data_annotations: optional annotations (a dict of string keys and dict values that contain true-data-type and row-storage-folder)
+:return: index of the newly added row</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="jipipe.filesystem.add_path">
+<span class="sig-prename descclassname"><span class="pre">jipipe.filesystem.</span></span><span class="sig-name descname"><span class="pre">add_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_slot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#jipipe.data_slot.DataSlot" title="jipipe.data_slot.DataSlot"><span class="pre">jipipe.data_slot.DataSlot</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">text_annotations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_annotations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_type_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'path'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jipipe/filesystem.html#add_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jipipe.filesystem.add_path" title="Permalink to this definition"></a></dt>
+<dd><p>Adds a new path into a new row of the specified slot
+:param data_type_id: The ID of the generated path data type
+:param path: a path-like object
+:param data_slot: the data slot
+:param text_annotations: optional annotations (a dict of string keys and string values)
+:param data_annotations: optional annotations (a dict of string keys and dict values that contain true-data-type and row-storage-folder)
+:return: index of the newly added row</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="jipipe.filesystem.get_file">
+<span class="sig-prename descclassname"><span class="pre">jipipe.filesystem.</span></span><span class="sig-name descname"><span class="pre">get_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_slot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#jipipe.data_slot.DataSlot" title="jipipe.data_slot.DataSlot"><span class="pre">jipipe.data_slot.DataSlot</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">row</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#jipipe.filesystem.get_file" title="Permalink to this definition"></a></dt>
+<dd><p>Gets a path data from a data slot
+:param data_slot: the data slot
+:param row: the row
+:return: path data as string</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="jipipe.filesystem.get_folder">
+<span class="sig-prename descclassname"><span class="pre">jipipe.filesystem.</span></span><span class="sig-name descname"><span class="pre">get_folder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_slot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#jipipe.data_slot.DataSlot" title="jipipe.data_slot.DataSlot"><span class="pre">jipipe.data_slot.DataSlot</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">row</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#jipipe.filesystem.get_folder" title="Permalink to this definition"></a></dt>
+<dd><p>Gets a path data from a data slot
+:param data_slot: the data slot
+:param row: the row
+:return: path data as string</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="jipipe.filesystem.get_path">
+<span class="sig-prename descclassname"><span class="pre">jipipe.filesystem.</span></span><span class="sig-name descname"><span class="pre">get_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_slot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#jipipe.data_slot.DataSlot" title="jipipe.data_slot.DataSlot"><span class="pre">jipipe.data_slot.DataSlot</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">row</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/jipipe/filesystem.html#get_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jipipe.filesystem.get_path" title="Permalink to this definition"></a></dt>
+<dd><p>Gets a path data from a data slot
+:param data_slot: the data slot
+:param row: the row
+:return: path data as string</p>
+</dd></dl>
+
+</section>
+<section id="module-jipipe.imagej">
+<span id="jipipe-imagej-module"></span><h2>jipipe.imagej module<a class="headerlink" href="#module-jipipe.imagej" title="Permalink to this headline"></a></h2>
+<p>This file provides functions to read/write ImageJ data types</p>
+<p>Zoltán Cseresnyés, Ruman Gerst</p>
+<p>Research Group Applied Systems Biology - Head: Prof. Dr. Marc Thilo Figge
+<a class="reference external" href="https://www.leibniz-hki.de/en/applied-systems-biology.html">https://www.leibniz-hki.de/en/applied-systems-biology.html</a>
+HKI-Center for Systems Biology of Infection
+Leibniz Institute for Natural Product Research and Infection Biology - Hans Knöll Institute (HKI)
+Adolf-Reichwein-Straße 23, 07745 Jena, Germany</p>
+<p>The project code is licensed under BSD 2-Clause.
+See the LICENSE file provided with the code for the full license.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="jipipe.imagej.add_image">
+<span class="sig-prename descclassname"><span class="pre">jipipe.imagej.</span></span><span class="sig-name descname"><span class="pre">add_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_slot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#jipipe.data_slot.DataSlot" title="jipipe.data_slot.DataSlot"><span class="pre">jipipe.data_slot.DataSlot</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">text_annotations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_annotations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">convert_64_to_32</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">imagej</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jipipe/imagej.html#add_image"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jipipe.imagej.add_image" title="Permalink to this definition"></a></dt>
+<dd><p>Adds a new image into a new row of the specified slot. The image will be saved as TIFF.
+Requires tifffile. This method accepts all parameters utilized by tifffile.imsave
+:param convert_64_to_32: If enabled, convert 64-bit float to 32-bit float. ImageJ does not support 64 bit
+:param data: an image. must be a numpy array. Can be None. In this case, you must provide shape and dtype (like tifffile’s method requires)
+:param data_slot: the data slot
+:param text_annotations: optional annotations (a dict of string keys and string values)
+:param data_annotations: optional annotations (a dict of string keys and dict values that contain true-data-type and row-storage-folder)
+:param imagej: if the generated output should have the necessary metadata for ImageJ loading
+:return: index of the newly added row</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="jipipe.imagej.add_table">
+<span class="sig-prename descclassname"><span class="pre">jipipe.imagej.</span></span><span class="sig-name descname"><span class="pre">add_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_slot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#jipipe.data_slot.DataSlot" title="jipipe.data_slot.DataSlot"><span class="pre">jipipe.data_slot.DataSlot</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">text_annotations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_annotations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jipipe/imagej.html#add_table"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jipipe.imagej.add_table" title="Permalink to this definition"></a></dt>
+<dd><p>Adds a new table into a new row of the specified slot
+:param table: the table. must be a Pandas table or dictionary that can be converted into a data frame
+:param data_slot: the data slot
+:param text_annotations: optional annotations (a dict of string keys and string values)
+:param data_annotations: optional annotations (a dict of string keys and dict values that contain true-data-type and row-storage-folder)
+:return: index of the newly added row</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="jipipe.imagej.get_image_file">
+<span class="sig-prename descclassname"><span class="pre">jipipe.imagej.</span></span><span class="sig-name descname"><span class="pre">get_image_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_slot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#jipipe.data_slot.DataSlot" title="jipipe.data_slot.DataSlot"><span class="pre">jipipe.data_slot.DataSlot</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">row</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jipipe/imagej.html#get_image_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jipipe.imagej.get_image_file" title="Permalink to this definition"></a></dt>
+<dd><p>Finds the image file located in imagej-imgplus-* data slot rows
+:param data_slot: the data slot
+:param row: the row
+:return: path to the image file or None if not found</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="jipipe.imagej.get_table_file">
+<span class="sig-prename descclassname"><span class="pre">jipipe.imagej.</span></span><span class="sig-name descname"><span class="pre">get_table_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_slot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#jipipe.data_slot.DataSlot" title="jipipe.data_slot.DataSlot"><span class="pre">jipipe.data_slot.DataSlot</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">row</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jipipe/imagej.html#get_table_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jipipe.imagej.get_table_file" title="Permalink to this definition"></a></dt>
+<dd><p>Finds the CSV table file located in imagej-results-table (and related) data slow rows
+:param data_slot: the data slot
+:param row: the row
+:return: path to the CSV file or None if not found</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="jipipe.imagej.load_image_file">
+<span class="sig-prename descclassname"><span class="pre">jipipe.imagej.</span></span><span class="sig-name descname"><span class="pre">load_image_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_slot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#jipipe.data_slot.DataSlot" title="jipipe.data_slot.DataSlot"><span class="pre">jipipe.data_slot.DataSlot</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">row</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jipipe/imagej.html#load_image_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jipipe.imagej.load_image_file" title="Permalink to this definition"></a></dt>
+<dd><p>Finds and loads the image file located in imagej-imgplus-* data slot rows and loads it with Skimage.
+Requires that Skimage is installed.
+:param data_slot: the data slot
+:param row: the row
+:return: Image data or None if no image was found</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="jipipe.imagej.load_table_file">
+<span class="sig-prename descclassname"><span class="pre">jipipe.imagej.</span></span><span class="sig-name descname"><span class="pre">load_table_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_slot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#jipipe.data_slot.DataSlot" title="jipipe.data_slot.DataSlot"><span class="pre">jipipe.data_slot.DataSlot</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">row</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jipipe/imagej.html#load_table_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#jipipe.imagej.load_table_file" title="Permalink to this definition"></a></dt>
+<dd><p>Finds and loads the CSV table file in imagej-results-table (and related) data slow rows as pandas data frame
+Requires that pandas is installed.
+:param data_slot: the data slot
+:param row: the row
+:return: Image data or None if no image was found</p>
+</dd></dl>
+
+</section>
+<section id="module-jipipe">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-jipipe" title="Permalink to this headline"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="jipipe" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Ruman Gerst.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
