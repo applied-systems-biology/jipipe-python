@@ -1,0 +1,13 @@
+[project]
+name = "jipipe-python"
+version = "1.81.0"
+description = "Python bindings for JIPipe"
+readme = "README.md"
+authors = [
+  {name = "Ruman Gerst", email = "ruman.gerst@leibniz-hki.de"},
+  {name = "Zoltan Cseresnyes", email = "zoltan.cseresnyes@leibniz-hki.de"},
+  {name = "Marc Thilo Figge", email = "thilo.figge@leibniz-hki.de"}
+]
+maintainers = [
+  {name = "Ruman Gerst", email = "ruman.gerst@leibniz-hki.de"}
+]
