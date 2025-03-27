@@ -14,5 +14,5 @@ setup(
     install_requires=[
       "pandas", "scikit-image"
     ],
-    version='2020.3',
+    version='0.3.0',
     zip_safe=False)
