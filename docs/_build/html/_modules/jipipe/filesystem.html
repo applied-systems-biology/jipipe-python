@@ -1,19 +1,20 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>jipipe.filesystem &mdash; JIPipe Python Bridge  documentation</title>
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
   
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
@@ -85,14 +86,16 @@
 <span class="sd">See the LICENSE file provided with the code for the full license.</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
-<span class="kn">import</span> <span class="nn">json</span>
-<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
 
-<span class="kn">from</span> <span class="nn">jipipe.data_slot</span> <span class="kn">import</span> <span class="n">DataSlot</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">jipipe.data_slot</span><span class="w"> </span><span class="kn">import</span> <span class="n">DataSlot</span>
 
 
-<div class="viewcode-block" id="get_path"><a class="viewcode-back" href="../../jipipe.html#jipipe.filesystem.get_path">[docs]</a><span class="k">def</span> <span class="nf">get_path</span><span class="p">(</span><span class="n">data_slot</span><span class="p">:</span> <span class="n">DataSlot</span><span class="p">,</span> <span class="n">row</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="get_path">
+<a class="viewcode-back" href="../../jipipe.html#jipipe.filesystem.get_path">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_path</span><span class="p">(</span><span class="n">data_slot</span><span class="p">:</span> <span class="n">DataSlot</span><span class="p">,</span> <span class="n">row</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Gets a path data from a data slot</span>
 <span class="sd">    :param data_slot: the data slot</span>
 <span class="sd">    :param row: the row</span>
@@ -107,13 +110,16 @@
     <span class="k">return</span> <span class="n">json_data</span><span class="p">[</span><span class="s2">&quot;path&quot;</span><span class="p">]</span></div>
 
 
+
 <span class="c1"># Aliases</span>
 <span class="n">get_file</span> <span class="o">=</span> <span class="n">get_path</span>
 <span class="n">get_folder</span> <span class="o">=</span> <span class="n">get_path</span>
 
 
-<div class="viewcode-block" id="add_path"><a class="viewcode-back" href="../../jipipe.html#jipipe.filesystem.add_path">[docs]</a><span class="k">def</span> <span class="nf">add_path</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">data_slot</span><span class="p">:</span> <span class="n">DataSlot</span><span class="p">,</span> <span class="n">text_annotations</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">data_annotations</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">data_type_id</span><span class="o">=</span><span class="s2">&quot;path&quot;</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="add_path">
+<a class="viewcode-back" href="../../jipipe.html#jipipe.filesystem.add_path">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">add_path</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">data_slot</span><span class="p">:</span> <span class="n">DataSlot</span><span class="p">,</span> <span class="n">text_annotations</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">data_annotations</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">data_type_id</span><span class="o">=</span><span class="s2">&quot;path&quot;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Adds a new path into a new row of the specified slot</span>
 <span class="sd">    :param data_type_id: The ID of the generated path data type</span>
 <span class="sd">    :param path: a path-like object</span>
@@ -136,8 +142,11 @@
     <span class="k">return</span> <span class="n">row</span></div>
 
 
-<div class="viewcode-block" id="add_folder"><a class="viewcode-back" href="../../jipipe.html#jipipe.filesystem.add_folder">[docs]</a><span class="k">def</span> <span class="nf">add_folder</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">data_slot</span><span class="p">:</span> <span class="n">DataSlot</span><span class="p">,</span> <span class="n">text_annotations</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">data_annotations</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="add_folder">
+<a class="viewcode-back" href="../../jipipe.html#jipipe.filesystem.add_folder">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">add_folder</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">data_slot</span><span class="p">:</span> <span class="n">DataSlot</span><span class="p">,</span> <span class="n">text_annotations</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">data_annotations</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">   Adds a new path into a new row of the specified slot</span>
 <span class="sd">   :param path: a path-like object</span>
 <span class="sd">   :param data_slot: the data slot</span>
@@ -148,8 +157,11 @@
     <span class="n">add_path</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">data_slot</span><span class="o">=</span><span class="n">data_slot</span><span class="p">,</span> <span class="n">text_annotations</span><span class="o">=</span><span class="n">text_annotations</span><span class="p">,</span> <span class="n">data_annotations</span><span class="o">=</span><span class="n">data_annotations</span><span class="p">,</span> <span class="n">data_type_id</span><span class="o">=</span><span class="s2">&quot;folder&quot;</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="add_file"><a class="viewcode-back" href="../../jipipe.html#jipipe.filesystem.add_file">[docs]</a><span class="k">def</span> <span class="nf">add_file</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">data_slot</span><span class="p">:</span> <span class="n">DataSlot</span><span class="p">,</span> <span class="n">text_annotations</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">data_annotations</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="add_file">
+<a class="viewcode-back" href="../../jipipe.html#jipipe.filesystem.add_file">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">add_file</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">data_slot</span><span class="p">:</span> <span class="n">DataSlot</span><span class="p">,</span> <span class="n">text_annotations</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">data_annotations</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">   Adds a new path into a new row of the specified slot</span>
 <span class="sd">   :param path: a path-like object</span>
 <span class="sd">   :param data_slot: the data slot</span>
@@ -158,6 +170,7 @@
 <span class="sd">   :return: index of the newly added row</span>
 <span class="sd">   &quot;&quot;&quot;</span>
     <span class="n">add_path</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">data_slot</span><span class="o">=</span><span class="n">data_slot</span><span class="p">,</span> <span class="n">text_annotations</span><span class="o">=</span><span class="n">text_annotations</span><span class="p">,</span> <span class="n">data_annotations</span><span class="o">=</span><span class="n">data_annotations</span><span class="p">,</span> <span class="n">data_type_id</span><span class="o">=</span><span class="s2">&quot;file&quot;</span><span class="p">)</span></div>
+
 </pre></div>
 
            </div>
